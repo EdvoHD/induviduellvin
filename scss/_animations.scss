@@ -1,0 +1,56 @@
+
+/* 
+------------------
+    ANIMATIONS
+------------------
+*/ 
+@keyframes incomeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(.5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes costSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(-.5rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes underlineAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(.2rem);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-.2rem);
+    }
+    100% {
+        transform: translateX(0);
+        
+    }
+}
+

@@ -1,0 +1,31 @@
+
+.button-wrapper {
+    
+    button.btn {
+        padding: .2rem 2rem;
+        border-radius: 50px;
+        /* background: #f32e9d; */
+        background: #2e85f3;
+        color: #fff;
+        font-weight: 900;
+        font-style: italic;
+        border: none;
+        /* border-bottom: 3px solid #581138; */
+        border-bottom: 3px solid #0e2b4f;
+        outline: none;
+        height: 45px;
+        font-size: .9rem;
+        cursor: pointer;
+    }
+    
+    button.btn:hover {
+        filter: brightness(1.05);
+        cursor: pointer;
+    }
+    
+    button.btn:active {
+        transform: translateY(2px);
+        border-bottom: 1px solid #000;
+    }
+}
+

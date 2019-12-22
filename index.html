@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>individuell uppgift 2 Edvin Aginger</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700i,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section id="wrapper">
+        
+        <div class="budget">
+            <h3 class="budget">Budget</h3>
+            <span id="budgetNum"></span>
+        </div>
+
+        <div class="inputs">
+            <div class="name">
+                <span>Namn</span>
+                <input type="text" id="name" placeholder="produkt namn" required>
+            </div>
+
+            <div class="select">
+                <span>Inkomst / Utgift</span>
+                <select name="options" id="options">
+                    <option selected value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+            </div>
+
+            <div class="price">
+                <span>Summa</span>
+                <input type="number" id="price" placeholder="produkt pris" min="1" required>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <button class="btn">Lägg till</button>
+        </div>
+        <div class="show-result">
+            <div class="income">
+                <h3>Inkomst</h3>
+            </div>
+            <div class="cost">
+                <h3>Utgifter</h3>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
