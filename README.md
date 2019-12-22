@@ -16,3 +16,4 @@ Har funktioner såsom:**
 - Live updatering när budgeten ändras.
 - Nice-to-have animation på budget-räknaren.
 - Kan gå under 0 då man faktiskt KAN gå minus i en budgetering om man inte är ekonomisk.
+- Error rutor ifall namn eller siffra inte är ifyllt för att uppnå kriterierna.
