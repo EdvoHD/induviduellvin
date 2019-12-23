@@ -5,7 +5,6 @@ EDVIN AGINGER WIE19S
 // sätt upp variablar som behövs globalt 
 let prodName;
 let prodPrice;
-let timer;
 const budgetContainer = document.querySelector("#budgetNum");
 const options = document.querySelector("#options");
 const income = document.querySelector(".income");
@@ -14,26 +13,37 @@ const button = document.querySelector(".btn");
 let difference;
 let diff;
 button.addEventListener("click", calcItems);
-let budget = 100;
+let budget;
+
+// Kallar på prompt direkt efter de globala variablarna lästs
+chooseBudget()
 
 // Skicka ut hur mycket du har som budget
-budgetContainer.append(budget);
+function chooseBudget() {
+    let setBudget = prompt("Skriv in din budget!", 100,);
+    if (setBudget == null || setBudget == "")  {
+        console.log("inte definierad budget");
+        budgetContainer.innerHTML = 0;
+    } else {
+        let lockedBudget = Number(setBudget);
+        budget = lockedBudget;
+        budgetContainer.innerHTML = budget;
+    }
+}
 
 
 // Animerar uppräkning och nedräkning av budget
 function animateValue(id, start, end, duration) {
 
+    // Räknar ut allt först för att sedan använda i run()
     // Hämtar elementet som är en ID
     let obj = document.getElementById(id);
     // checkar början och slut (start & end)
     let range = end - start;
-
     // inte under 50ms för det är för fort
     let minTimer = 50;
-
     // Räknar ut hur många steg beroende på hur stort avståndet mellan talen är.
     let stepTime = Math.abs(Math.floor(duration / range));
-
     // En checker som ser till att det aldrig går under 50ms
     stepTime = Math.max(stepTime, minTimer);
     
@@ -97,7 +107,7 @@ function calcItems() {
             prodNameDiv.classList.remove("input-error");
             
         }
-
+        // Efter if statements
         // skapa div som värdet ska appendas in inuti
         const incomeDiv = document.createElement("div");
         incomeDiv.className = "income-div";
